@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebSandbox.Models;
 
 namespace WebSandbox.Data
 {
@@ -9,5 +10,6 @@ namespace WebSandbox.Data
             : base(options)
         {
         }
+        public DbSet<WebSandbox.Models.Joke>? Joke { get; set; }
     }
 }
