@@ -50,6 +50,47 @@ console.log(typeof myfunnies)
 
 printFunny(myfunnies)
 
+interface bluh
+{
+  bluh?: meme
+}
+
+interface gluh extends bluh
+{
+  balls: boolean;
+}
+
+let mfw: gluh = {
+  balls: false,
+  bluh: {
+    name: "weewee",
+    funny: 3
+  }
+}
+
+printFunny(mfw.bluh!)
+
+type antimeme = meme &
+{
+  irony: boolean
+}
+
+let psst : antimeme = {
+  irony: false,
+  name: "mr incredbl",
+  funny: 1
+}
+
+printFunny(psst)
+
+const ongfr = (ya: antimeme) => 
+{
+  return
+}
+
+//ongfr(mfw.bluh!)
+ongfr(psst)
+
 function App() {
   return (
     <div className="App">Hello World!</div>
