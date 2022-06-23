@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "startreact",
+			"command": "npm",
+			"args": [
+				"start"
+			],
+			"type": "process",
+		}
+	]
+}
