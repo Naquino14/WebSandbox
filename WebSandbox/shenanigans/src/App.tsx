@@ -1,99 +1,25 @@
-import './App.css';
-console.clear()
+import React from 'react'
+import './App.css'
+import Foot from './components/Foot'
+import InputField from './components/InputField'
+import './GlobalFonts.css'
 
-const name = "nate"
-let guhh:[boolean, string] = [true, name]
 
-let zooweemama: meme
-zooweemama = {
-  name: "blah"
-}
-let weewee : meme = { 
-  name: name,
-  funny: 10 
-  }
-
-type meme = {
-  name: string,
-  funny?: number | string
-}
-
-let myfunnies: meme[] = [
-  zooweemama, weewee, {name: "krabber patty", funny: "not funny???"}
-]
-console.log("this is a funny interpolated string and it uses \` so cool i think")
-
-//let printFunny : (funny: meme | meme[] ) => void
-
-let printFunny = (funny: meme | meme[]) =>
-{
-  if (funny instanceof Array)
-  {
-    funny.forEach(e => 
-    { 
-      console.log(`In your list of funnies, here is a funny: 
-      ${e.name}, 
-      ${e.funny ?? "no funny"}. 
-      The funny score is a ${typeof(e.funny)}`) 
-    })
-  }
-  else
-  {
-    console.log(`Here is the funny: 
-        ${funny.name}, 
-        ${funny.funny ?? "no funns"}. 
-        The funny score is a ${typeof(funny.funny)})}`)
-  }
-}
-console.log(typeof weewee)
-console.log(typeof myfunnies)
-
-printFunny(myfunnies)
-
-interface bluh
-{
-  bluh?: meme
-}
-
-interface gluh extends bluh
-{
-  balls: boolean;
-}
-
-let mfw: gluh = {
-  balls: false,
-  bluh: {
-    name: "weewee",
-    funny: 3
-  }
-}
-
-printFunny(mfw.bluh!)
-
-type antimeme = meme &
-{
-  irony: boolean
-}
-
-let psst : antimeme = {
-  irony: false,
-  name: "mr incredbl",
-  funny: 1
-}
-
-printFunny(psst)
-
-const ongfr = (ya: antimeme) => 
-{
-  return
-}
-
-//ongfr(mfw.bluh!)
-ongfr(psst)
-
-function App() {
+const App: React.FC = () => {
+  // Now im gonna define a state by setting both of these variables?
+  // this is a basic "hook"
+  const [funny, setFunny] = React.useState<string>('');
+  
   return (
-    <div className="App">Hello World!</div>
+    <div className="App">
+      <span className="heading">Funnyify</span>
+      <InputField funny={funny} setFunny={setFunny}/> 
+      {/* ok so this is really cool. 
+      Its a JSX element defined in its 
+      sown file and can be reused anywhere! */}
+      <Foot/>
+    </div>
+    
   )
 }
 

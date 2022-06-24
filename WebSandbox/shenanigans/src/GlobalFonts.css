@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'comic-sans';
+    src: url(/public/Fonts/COMIC.TTF);
+}
+
+@font-face {
+    font-family: 'fascinate';
+    src: url(/public/Fonts/FASCINATE.ttf);
+}
