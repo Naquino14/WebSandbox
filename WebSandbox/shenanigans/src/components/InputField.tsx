@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './InputField.css'
 
 // this defines the shape of the that the element can have 
@@ -9,6 +9,7 @@ interface Props {
     setFunny: React.Dispatch<React.SetStateAction<string>>
     // thats a little annoying to type... 
     // maybe theres an easier way?
+    addFunny: (e: React.FormEvent) => void
 }
 // a little confusing but we will make it
 
@@ -16,10 +17,19 @@ interface Props {
 // and is passed in as an argument to the function from the element
 // hypothetically in C# this will look like this:
 // internal readonly React.FC<Props> InputField((string funny, React.Dispatch<React.SetStateAction<string>> setFunny) Prop) {}
-const InputField: React.FC<Props> = ({funny, setFunny}) => {
+const InputField: React.FC<Props> = ({funny, setFunny, addFunny}) => {
+  // referencing the input field html element
+  const inputRef = useRef<HTMLInputElement>(null)
+
   return (
-    <form className='input'>
-        <input 
+    <form className='input' onSubmit={(e) => {
+      addFunny(e)
+      // this tutorial is so bad
+      // man literally said the nullable had to do with the useref parameter...
+      inputRef.current?.blur()
+    }}>
+        <input
+            ref={inputRef}
             type='input' 
             value={funny}
             onChange={(e) => setFunny(e.target.value)}

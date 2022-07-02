@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ACH-1 Demonstrator">
+      <HintPath>..\..\..\ACH-1\ACH-1 Demonstrator\ACH-1 Demonstrator\bin\Release\net6.0\ACH-1 Demonstrator.dll</HintPath>
+    </Reference>
+    <Reference Include="ADIS-TLS">
+      <HintPath>..\..\..\ADISTLS\ADIS-TLS\ADIS-TLS\bin\Release\net6.0\ADIS-TLS.dll</HintPath>
+    </Reference>
+    <Reference Include="AKG-1">
+      <HintPath>..\..\..\AKG-1\AKG-1\AKG-1\bin\Release\net6.0\AKG-1.dll</HintPath>
+    </Reference>
+    <Reference Include="ARC-128">
+      <HintPath>..\..\..\ARC-128\ARC-128\bin\Release\net6.0\ARC-128.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLHelpers">
+      <HintPath>..\..\..\SQLHelpers\SQLHelpers\bin\Release\net6.0\SQLHelpers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
