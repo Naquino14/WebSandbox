@@ -1,0 +1,59 @@
+.funnies_single
+{
+    display: flex;
+    font-family: 'comic-sans';
+    font-size: 40px;
+    border: 6px double #a400cd;
+    border-radius: 15%;
+    background-color: #f6ff00;
+    color: #606060;
+    margin: 10px;
+    padding: 3px;
+    transition: all 0.18s ease-in-out;
+}
+@media (max-width: 1000px) {
+    .funnies_single {
+        margin: 10px;
+        padding: 3px;
+        font-size: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .funnies_single {
+        margin: 10px;
+        padding: 3px;
+        font-size: 20px;
+    }
+}
+.funnies_single:hover
+{
+    background-color: #d1d800;
+}
+
+.funnies_single_text
+{
+    margin-right: 6px;
+    margin-left: 2px;
+}
+
+.funnies_single_icons
+{
+    display: inline-block;
+}
+
+.funnies_single_icon
+{
+    border-radius: 20%;
+    margin: 3px;
+    transition: all 0.1s ease-in-out;
+}
+.funnies_single_icon:hover
+{
+    cursor: pointer;
+    background-color: #d702da8d;
+}
+.funnies_single_icon:active
+{
+    background-color: transparent;
+    color: #d702da8d;
+}
