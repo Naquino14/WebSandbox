@@ -1,7 +1,61 @@
 .funnies
 {
     display: flex;
-    justify-content: space-evenly;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: aquamarine;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'fascinate';
+    color: darkorchid;
+    text-shadow: 2px 2px black;
+}
+
+.funnies_cringe
+{
+    display: flex;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(255, 54, 54);
+    margin-left: 5%;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'fascinate';
+    color: rgb(0, 216, 83);
+    text-shadow: 2px 2px black;
+}
+@media(min-width: 700px)
+{
+    .container
+    {
+        display: flex;
+    }
+}
+@media (max-width: 700px) {
+    .funnies {
+        width: 85%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .funnies_cringe {
+        width: 85%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .container
+    {
+        display: contents;
+    }
+}
+
+.container
+{
     width: 90%;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-between;
 }

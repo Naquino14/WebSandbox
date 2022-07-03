@@ -7,20 +7,19 @@
     border-radius: 15%;
     background-color: #f6ff00;
     color: #606060;
-    margin: 10px;
-    padding: 3px;
     transition: all 0.18s ease-in-out;
+    margin: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 @media (max-width: 1000px) {
     .funnies_single {
-        margin: 10px;
         padding: 3px;
         font-size: 30px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .funnies_single {
-        margin: 10px;
         padding: 3px;
         font-size: 20px;
     }
@@ -28,17 +27,21 @@
 .funnies_single:hover
 {
     background-color: #d1d800;
+    transform: scale(1.03);
+    box-shadow: 0 0 5px black;
 }
 
 .funnies_single_text
 {
     margin-right: 6px;
     margin-left: 2px;
+    text-shadow: none;
 }
 
 .funnies_single_icons
 {
-    display: inline-block;
+    margin-left: auto;
+    display: flex;
 }
 
 .funnies_single_icon
@@ -56,4 +59,31 @@
 {
     background-color: transparent;
     color: #d702da8d;
+}
+
+.funnies_single_edit
+{
+    display: flex;
+    border-color: #d702da8d;
+    height: 75%;
+    margin-top: 4px;
+    font-size: 70%;
+    width: 75%;
+    border-radius: 8px;
+}
+@media (max-width: 1000px) {
+    .funnies_single_edit {
+        margin-top: 2px;
+    }
+}
+@media (max-width: 600px) {
+    .funnies_single_edit
+    {
+        margin-top: 0;
+    }
+}
+
+.funnies_single_text_label
+{
+    text-shadow: none;
 }

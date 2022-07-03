@@ -9,10 +9,27 @@ interface Props {
 }
 
 const FunnyList : React.FC<Props> = ({funnies, setFunnies}) => {
-  return <div className='funnies'>
-    {funnies.map((funny) => (
-        <SingleFunny funny={funny} key={funny.id} funnies={funnies} setFunnies={setFunnies}/>
-    ))}
+  return <div className="container">
+    <div className="funnies">
+      <span className="funnies_heading">
+        Funnies
+      </span>
+      {
+        funnies.map((funny) => (
+          funny.isCringe ? null : <SingleFunny funny={funny} key={funny.id} funnies={funnies} setFunnies={setFunnies}/>
+        ))
+      }
+    </div>
+    <div className="funnies_cringe">
+      <span className="funnies_heading_cringe">
+        Cringe
+      </span>
+      {
+        funnies.map((funny) => (
+            funny.isCringe ? <SingleFunny funny={funny} key={funny.id} funnies={funnies} setFunnies={setFunnies}/> : null
+        ))
+      }
+    </div>
   </div>
 }
 

@@ -12,6 +12,7 @@ const App: React.FC = () => {
   // this is a basic "hook"
   const [funny, setFunny] = React.useState<string>('')
   const [funnies, setFunnies] = React.useState<Funny[]>([])
+  const [cringies, setCringies] = React.useState<Funny[]>([])
 
   const addFunny = (e : React.FormEvent) => {
     e.preventDefault();
